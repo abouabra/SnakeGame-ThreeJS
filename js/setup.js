@@ -25,7 +25,7 @@ const GUI = new dat.GUI();
 
 var directionalLight = new THREE.PointLight(0xffffff, 1, 500, 0.01);
 directionalLight.castShadow = true; // default false
-directionalLight.position.z = 100;
+directionalLight.position.z = -100;
 scene.add(directionalLight);
 
 const lightFolder = GUI.addFolder("Directional Light");
