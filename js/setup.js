@@ -41,7 +41,7 @@ const params = {
 	bevelSegments: 2,
 };
 const loader = new THREE.FontLoader();
-loader.load("/SnakeGame-ThreeJS//Assets/Pacifico_Regular.json", (loadedFont) => {
+loader.load("https://raw.githubusercontent.com/abouabra/SnakeGame-ThreeJS/master/Assets/Pacifico_Regular.json", (loadedFont) => {
 	font = loadedFont; // Assign font to global variable
 	createScoreText(font);
 });
