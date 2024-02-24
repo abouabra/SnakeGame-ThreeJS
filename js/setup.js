@@ -18,7 +18,6 @@ camera.position.z = 50;
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 const stats = new Stats();
 document.body.appendChild(stats.dom);
-const GUI = new dat.GUI();
 
 
 
@@ -27,12 +26,6 @@ var directionalLight = new THREE.PointLight(0xffffff, 1, 500, 0.01);
 directionalLight.castShadow = true; // default false
 directionalLight.position.z = -20;
 scene.add(directionalLight);
-
-const lightFolder = GUI.addFolder("Directional Light");
-lightFolder.add(directionalLight.position, "x", -100, 100);
-lightFolder.add(directionalLight.position, "y", -100, 100);
-lightFolder.add(directionalLight.position, "z", -100, 100);
-
 
 
 let font; // Declare font as a global variable

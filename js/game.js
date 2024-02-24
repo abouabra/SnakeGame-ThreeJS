@@ -13,9 +13,6 @@ backgroundPlane.position.z = -1;
 backgroundPlane.receiveShadow = true;
 scene.add(backgroundPlane);
 
-const BGFolder = GUI.addFolder("Background Plane");
-BGFolder.add(backgroundPlane.material, "wireframe");
-
 const borderUP = new THREE.Mesh(
 	new THREE.BoxGeometry(world.width + 3, 1, 1),
 	new THREE.MeshPhongMaterial({
