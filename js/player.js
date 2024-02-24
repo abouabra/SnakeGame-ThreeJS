@@ -58,19 +58,6 @@ class Player {
 			this.pos.x++;
 		}
 
-		// if (this.pos.x > world.width / 2) {
-		// 	this.pos.x = -world.width / 2;
-		// }
-		// if (this.pos.x < -world.width / 2) {
-		// 	this.pos.x = world.width / 2;
-		// }
-		// if (this.pos.y > world.height / 2) {
-		// 	this.pos.y = -world.height / 2;
-		// }
-		// if (this.pos.y < -world.height / 2) {
-		// 	this.pos.y = world.height / 2;
-		// }
-
 		if (
 			this.pos.x > world.width / 2 ||
 			this.pos.x < -world.width / 2 ||

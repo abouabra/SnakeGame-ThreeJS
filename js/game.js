@@ -6,9 +6,7 @@ let world = {
 let backgroundPlane = new THREE.Mesh(
 	new THREE.PlaneGeometry(world.width, world.height, world.width, world.height),
 	new THREE.MeshPhongMaterial({
-		// color: 0xffffff,
 		color: 0x3e3e3e,
-		// wireframe: true
 	})
 );
 backgroundPlane.position.z = -1;
@@ -22,37 +20,21 @@ const borderUP = new THREE.Mesh(
 	new THREE.BoxGeometry(world.width + 3, 1, 1),
 	new THREE.MeshPhongMaterial({
 		color: 0xffffff, // Object color
-		// emissive: 0xffff00, // Emissive light color (red)
-		// emissiveIntensity: 10, // Light intensity
 	})
 );
 borderUP.position.y = world.height / 2 + 1;
 borderUP.castShadow = true;
 borderUP.receiveShadow = true;
-// const borderUPLight = new THREE.PointLight(0xffffff, 1, 100);
-// borderUPLight.position.set(0, world.height / 2 + 1, 3);
-// scene.add(borderUPLight);
 scene.add(borderUP);
 
 const borderDOWN = borderUP.clone();
 borderDOWN.position.y = -world.height / 2 - 1;
-// const borderDOWNLight = borderUPLight.clone();
-// borderDOWNLight.position.y = -world.height / 2 - 1;
-// scene.add(borderDOWNLight);
-// borderUP.receiveShadow = true;
-// borderUP.castShadow = true;
 scene.add(borderDOWN);
 
 const borderLEFT = borderUP.clone();
 borderLEFT.rotation.z = Math.PI / 2;
 borderLEFT.position.x = -world.width / 2 - 1;
 borderLEFT.position.y = 0;
-// const borderLEFTLight = borderUPLight.clone();
-// borderLEFTLight.position.x = -world.width / 2 - 1;
-// borderLEFTLight.position.y = 0;
-// scene.add(borderLEFTLight);
-// borderLEFT.receiveShadow = true;
-// borderLEFT.castShadow = true;
 scene.add(borderLEFT);
 
 const borderRIGHT = borderUP.clone();
@@ -60,19 +42,9 @@ borderRIGHT.rotation.z = Math.PI / 2;
 borderRIGHT.position.x = world.width / 2 + 1;
 borderRIGHT.position.y = 0;
 
-// const borderRIGHTLight = borderUPLight.clone();
-// borderRIGHTLight.position.x = world.width / 2 + 1;
-// borderRIGHTLight.position.y = 0;
-// scene.add(borderRIGHTLight);
-// borderRIGHT.receiveShadow = true;
-// borderRIGHT.castShadow = true;
 scene.add(borderRIGHT);
 
 
-
-
-// let ambientLight = new THREE.AmbientLight(0xffffff, 0.1);
-// scene.add(ambientLight);
 
 let player = new Player();
 let controller = new Controller();

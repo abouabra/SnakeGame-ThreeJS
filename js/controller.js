@@ -25,18 +25,5 @@ class Controller {
 		if (this.keyPressed == "s") {
 			this.downarrow = true;
 		}
-
-		// if (this.keyPressed == "o") {
-		// 	directionalLight.position.z += 1;
-		// }
-		// if (this.keyPressed == "l") {
-		// 	directionalLight.position.z -= 1;
-		// }
-		// if (this.keyPressed == "k") {
-		// 	directionalLight.position.x += 1;
-		// }
-		// if (this.keyPressed == "m") {
-		// 	directionalLight.position.x -= 1;
-		// }
 	}
 }

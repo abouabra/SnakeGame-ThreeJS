@@ -25,7 +25,7 @@ const GUI = new dat.GUI();
 
 var directionalLight = new THREE.PointLight(0xffffff, 1, 500, 0.01);
 directionalLight.castShadow = true; // default false
-directionalLight.position.z = -100;
+directionalLight.position.z = -20;
 scene.add(directionalLight);
 
 const lightFolder = GUI.addFolder("Directional Light");
@@ -48,8 +48,7 @@ const params = {
 	bevelSegments: 2,
 };
 const loader = new THREE.FontLoader();
-loader.load("./Pacifico_Regular.json", (loadedFont) => {
-// loader.load("./FFF_Forward_Regular.json", (loadedFont) => {
+loader.load("/Assests/Pacifico_Regular.json", (loadedFont) => {
 	font = loadedFont; // Assign font to global variable
 	createScoreText(font);
 });
@@ -74,8 +73,6 @@ function createScoreText(font) {
 	scoreTextMesh.position.y = 10;
 	scoreTextMesh.position.z = 1;
 	scoreTextMesh.rotation.y = 1;
-	// scoreTextMesh.castShadow = true;
-	// scoreTextMesh.receiveShadow = true;
 	scene.add(scoreTextMesh);
 }
 
